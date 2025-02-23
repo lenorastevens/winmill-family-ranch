@@ -10,8 +10,13 @@ export default {
     extend: {
       colors: {
         background: "#000000",
-        foreground: "#9c7945",
+        foreground: "#9C7945",
+        accent1: "#45050C",
+        accent2: "#E1D28F"
       },
+      fontFamily: {
+        rancho: ['rancho', 'serif']
+      }
     },
   },
   plugins: [],
