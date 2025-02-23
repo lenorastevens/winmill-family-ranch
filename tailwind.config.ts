@@ -15,7 +15,10 @@ export default {
         accent2: "#E1D28F"
       },
       fontFamily: {
-        rancho: ['rancho', 'serif']
+        rancho: ['Rancho', 'serif'],
+        fredericka: ['Fredericka the Great', 'serif'],
+        bigShot: ['Bigshot One', 'serif'],
+        alfaSlab: ['Alfa Slab One', 'serif'],
       }
     },
   },

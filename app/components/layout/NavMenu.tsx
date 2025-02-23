@@ -7,61 +7,61 @@ import { Cabin, Event, Newspaper, EventSeat, RequestQuote, WorkHistory, Collecti
 export default function NavMenu() {
   return (
     <nav className="py-4">
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="hidden lg:flex items-center space-x-4">
+      <div className="container mx-auto px-4 flex justify-center items-center">
+        <div className="hidden lg:flex items-center gap-x-16">
           <Link
             href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <Cabin /> Home
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/events"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <Event /> Events
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/news"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <Newspaper /> News
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/rsvp"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <EventSeat /> RSVP
           </Link>
-          <Link href="/">
+          <Link href="/" className="mx-2">
           <Image
             src="/images/wfr-logo.png"
             alt="RTTR Logo"
-            width={100}
-            height={100} 
+            width={110}
+            height={110} 
           />
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/fees"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <RequestQuote /> Fees
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/progress"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <WorkHistory /> Progress
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/gallery"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <Collections /> Gallery
           </Link>
           <Link
-            href="/"
-            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2"
+            href="/contacts"
+            className="text-foreground text-2xl font-rancho hover:text-accent2 hover:bg-accent1 p-2 flex items-center gap-3"
           >
             <ContactPage /> Contacts
           </Link>
