@@ -6,8 +6,8 @@
 :root {
   --background: #000000;
   --foreground: #9C7945;
-  --accent1: "#45050C";
-  --accent2: "#E1D28F";
+  --accent1: #45050C;
+  --accent2: #E1D28F;
 
   --nav-font: "Rancho", serif;
   --heading-font: "Fredericka the Great", serif;
