@@ -1,7 +1,6 @@
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { Close, MenuOpen, Cabin, Event, Newspaper, EventSeat, RequestQuote, WorkHistory, Collections, ContactPage } from '@mui/icons-material';
+import NavItem from "./NavItem";
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +11,7 @@ export default function HamburgerMenu() {
 
   return(
     <div className="lg:hidden">
-      <div className="flex items-center justify-between p-4">
-        <Image
-            src="/images/wfr-logo.png"
-            alt="RTTR Logo"
-            width={60}
-            height={60}
-        />
+      <div className="flex items-center justify-end p-4">
         <MenuOpen className="cursor-pointer text-foreground" onClick={toggleMenu}/>
       </div>
       <div
@@ -30,30 +23,14 @@ export default function HamburgerMenu() {
           <Close className="cursor-pointer text-foreground" onClick={toggleMenu}/>
         </div>
         <div className="flex flex-col space-y-4 p-4">
-          <Link href="/" className="text-foreground text-2xl hover:text-accent2 " onClick={toggleMenu}>
-            <Cabin /> Home
-          </Link>
-          <Link href="/about" className="text-foreground text-2xl hover:text-accent2 " onClick={toggleMenu}>
-            <Event /> Events
-          </Link>
-          <Link href="/recipes" className="text-foreground text-2xl hover:text-accent2 " onClick={toggleMenu}>
-            <Newspaper /> News
-          </Link>
-          <Link href="/meal-plan" className="text-foreground hover:text-accent2 " onClick={toggleMenu}>
-            <EventSeat /> RSVP
-          </Link>
-          <Link href="/" className="text-foreground text-2xl hover:text-accent2 " onClick={toggleMenu}>
-            <RequestQuote /> Fees
-          </Link>
-          <Link href="/about" className="text-foreground text-2xl hover:text-accent2 " onClick={toggleMenu}>
-            <WorkHistory /> Progress
-          </Link>
-          <Link href="/recipes" className="text-foreground text-2xl hover:text-accent2 " onClick={toggleMenu}>
-            <Collections /> Gallery
-          </Link>
-          <Link href="/meal-plan" className="text-foreground hover:text-accent2 " onClick={toggleMenu}>
-            <ContactPage /> Contacts
-          </Link>
+          <NavItem href="/" icon={<Cabin />} label="Home"/>
+          <NavItem href="/events" icon={<Event />} label="Events"/>
+          <NavItem href="/rsvp" icon={<EventSeat />} label="RSVP"/>
+          <NavItem href="/contacts" icon={<ContactPage />} label="Contacts"/>
+          <NavItem href="/fees" icon={<RequestQuote />} label="Fees"/>
+          <NavItem href="/news" icon={<Newspaper />} label="News"/>
+          <NavItem href="/progress" icon={<WorkHistory />} label="Progress"/>
+          <NavItem href="/gallery" icon={<Collections />} label="Gallery"/>
       </div>
     </div>
     {isOpen && (
