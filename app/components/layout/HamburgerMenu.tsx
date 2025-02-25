@@ -9,6 +9,10 @@ export default function HamburgerMenu() {
     setIsOpen(!isOpen);
   }
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return(
     <div className="lg:hidden">
       <div className="flex items-center justify-end p-4">
@@ -23,14 +27,14 @@ export default function HamburgerMenu() {
           <Close className="cursor-pointer text-foreground" onClick={toggleMenu}/>
         </div>
         <div className="flex flex-col space-y-4 p-4">
-          <NavItem href="/" icon={<Cabin />} label="Home"/>
-          <NavItem href="/events" icon={<Event />} label="Events"/>
-          <NavItem href="/rsvp" icon={<EventSeat />} label="RSVP"/>
-          <NavItem href="/contacts" icon={<ContactPage />} label="Contacts"/>
-          <NavItem href="/fees" icon={<RequestQuote />} label="Fees"/>
-          <NavItem href="/news" icon={<Newspaper />} label="News"/>
-          <NavItem href="/progress" icon={<WorkHistory />} label="Progress"/>
-          <NavItem href="/gallery" icon={<Collections />} label="Gallery"/>
+          <NavItem href="/" icon={<Cabin />} label="Home" onClick={closeMenu}/>
+          <NavItem href="/events" icon={<Event />} label="Events" onClick={closeMenu}/>
+          <NavItem href="/rsvp" icon={<EventSeat />} label="RSVP" onClick={closeMenu}/>
+          <NavItem href="/contacts" icon={<ContactPage />} label="Contacts" onClick={closeMenu}/>
+          <NavItem href="/fees" icon={<RequestQuote />} label="Fees" onClick={closeMenu}/>
+          <NavItem href="/news" icon={<Newspaper />} label="News" onClick={closeMenu}/>
+          <NavItem href="/progress" icon={<WorkHistory />} label="Progress" onClick={closeMenu}/>
+          <NavItem href="/gallery" icon={<Collections />} label="Gallery" onClick={closeMenu}/>
       </div>
     </div>
     {isOpen && (

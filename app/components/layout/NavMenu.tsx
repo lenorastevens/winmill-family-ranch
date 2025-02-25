@@ -9,9 +9,9 @@ import { Cabin, Event, Newspaper, EventSeat, RequestQuote, WorkHistory, Collecti
 export default function NavMenu() {
   return (
     <nav className="py-2 lg:py-6">
-      <div className="container mx-auto px-4 grid sm:grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center lg:h-24 xl:gap-x-20">
+      <div className="container mx-auto px-4 grid sm:grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center lg:h-32 gap-x-0 xl:gap-x-20">
          
-        <div className="hidden lg:flex justify-end gap-x-2 xl:gap-x-7 min-w-0">
+        <div className="hidden lg:flex justify-end gap-x-1 xl:gap-x-9 min-w-0">
           <NavItem href="/" icon={<Cabin/>} label="Home" />
           <NavItem href="/events" icon={<Event />} label="Events"/>          
           <NavItem href="/rsvp" icon={<EventSeat />} label="RSVP"/>
@@ -23,14 +23,14 @@ export default function NavMenu() {
             <Image
               src="/images/wfr-logo.png"
               alt="Winmill Family Ranch Logo"
-              width={110}
-              height={110}
-              className="h-20 w-auto lg:h-24 lg:my-2" 
+              width={150}
+              height={150}
+              className="h-20 w-auto lg:h-32 lg:my-2" 
             />
           </Link>
         </div>
 
-        <div className="hidden lg:flex justify-start gap-x-2 xl:gap-x-7 min-w-0">
+        <div className="hidden lg:flex justify-start gap-x-1 xl:gap-x-9 min-w-0">
           <NavItem href="/fees" icon={<RequestQuote />} label="Fees"/>
           <NavItem href="/news" icon={<Newspaper />} label="News" />
           <NavItem href="/progress" icon={<WorkHistory />} label="Progress"/>
@@ -42,8 +42,8 @@ export default function NavMenu() {
             <Image
               src="/images/wfr-logo.png"
               alt="Winfmill Family Ranch Logo"
-              width={70}
-              height={70}
+              width={90}
+              height={90}
             />
           </Link>
           <HamburgerMenu />
