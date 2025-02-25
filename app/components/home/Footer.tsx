@@ -8,8 +8,8 @@ export default function Footer() {
           <Image
             src="/images/rttr-logo.png"
             alt="Ranch Motto Logo"
-            width={125}
-            height={60}
+            width={150}
+            height={55}
             className="mb-4"
           >
           </Image>
