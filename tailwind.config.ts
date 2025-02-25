@@ -16,7 +16,6 @@ export default {
       },
       fontFamily: {
         rancho: ['var(--font-rancho)', 'serif'],
-        fredericka: ['var(--font-fredericka)', 'serif'],
         bigShot: ['var(--font-bigshot)', 'serif'],
       }
     },

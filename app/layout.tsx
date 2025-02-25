@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Rancho, Bigshot_One, Fredericka_the_Great } from "next/font/google";
+import { Rancho, Bigshot_One } from "next/font/google";
 import "./globals.css";
 // import NavMenu from "./components/layout/NavMenu";
 import Footer from "./components/home/Footer";
@@ -17,12 +17,12 @@ const bigShot = Bigshot_One({
   subsets: ['latin'],
 })
 
-const fredericka = Fredericka_the_Great({
-  variable: "--font-fredericka",
-  weight: "400",
-  subsets: ['latin'],
-  style: "normal",
-})
+// const fredericka = Fredericka_the_Great({
+//   variable: "--font-fredericka",
+//   weight: "400",
+//   subsets: ['latin'],
+//   style: "normal",
+// })
 
 export const metadata: Metadata = {
   title: {
@@ -39,9 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${rancho.variable} ${fredericka.variable} ${bigShot.variable} antialiased`}
-      >
+      <body className={`${rancho.variable} ${bigShot.variable} antialiased`}>
         <Navigation />
         {children}
         <Footer />

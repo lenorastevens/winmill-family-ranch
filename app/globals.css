@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,9 +8,14 @@
   --foreground: #9C7945;
   --accent1: #45050C;
   --accent2: #E1D28F;
+  --font-heading: "Fredericka the Great", serif;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+h1 {
+  font-family: var(--font-heading);
 }
