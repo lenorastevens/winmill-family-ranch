@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Fees from "../components/pricing";
-// import ConstructionImage from "../components/home/ConstructionImage";
 
 export const metadata: Metadata = {
   title: "Fees",

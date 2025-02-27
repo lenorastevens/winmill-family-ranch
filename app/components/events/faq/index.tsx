@@ -4,12 +4,7 @@ import { FAQType } from '@/app/lib/definitions';
 import { ExpandMore, ExpandLess } from '@mui/icons-material';
 import Info from './info';
 
-type FAQItemProps = {
-  question: string;
-  answer: string;
-};
-
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
+const FAQItem: React.FC<FAQType> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAnswer = () => {
