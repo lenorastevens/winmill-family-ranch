@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import ConstructionImage from "../components/home/ConstructionImage";
+// import ConstructionImage from "../components/home/ConstructionImage";
+import WorkProgress from "../components/progress";
 
 export const metadata: Metadata = {
   title: "Progress",
@@ -8,8 +9,7 @@ export const metadata: Metadata = {
 export default function Events() {
   return (
     <div className="container mx-auto p-6 flex flex-col items-center text-center">
-      <h1 className="text-5xl text-center mb-6">Work Progress</h1>
-      <ConstructionImage />
+      <WorkProgress />
     </div>
     
   )

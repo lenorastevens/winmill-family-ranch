@@ -36,7 +36,7 @@ const Sidebar = ({
             <Link href="/fees" onClick={toggle}><RequestQuote /><span> Fees</span></Link>
           </li>
           <li>
-            <Link href="/news" onClick={toggle}><Newspaper /><span> News</span></Link>
+            <Link href="/blog" onClick={toggle}><Newspaper /><span> Blog</span></Link>
           </li>
           <li>
             <Link href="/progress" onClick={toggle}><WorkHistory /><span> Progress</span></Link>

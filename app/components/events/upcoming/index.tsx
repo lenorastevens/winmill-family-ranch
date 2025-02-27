@@ -21,7 +21,7 @@ const nextEvent = [
 
 export default function NextEvent() {
   return (
-    <section className='py-16 bg-accent2 text-accent1 font-bigShot text-center'>
+    <section className='py-16 bg-gradient-to-r from-foreground via-accent2 to-foreground text-accent1 font-bigShot text-center'>
       <div className='container mx-auto px-6 md:px-12'>
         <h1 className="text-5xl text-center mb-6">
           Upcoming Events
