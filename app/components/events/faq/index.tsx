@@ -1,0 +1,48 @@
+'use client'
+import React, { useState } from 'react';
+import { FAQType } from '@/app/lib/definitions';
+import { ExpandMore, ExpandLess } from '@mui/icons-material';
+import Info from './info';
+
+type FAQItemProps = {
+  question: string;
+  answer: string;
+};
+
+const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAnswer = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="faq-item">
+      <div className="question pl-4 py-2" onClick={toggleAnswer}>
+        {question}{" "}{isOpen ? <ExpandLess /> : <ExpandMore />}
+      </div>
+      {isOpen && <div className="answer py-2" onClick={toggleAnswer}>{answer}</div>}
+    </div>
+  );
+};
+
+const FAQ = ({ faqs }: { faqs: FAQType[] }) => {
+  return (
+    <div className='py-16 container mx-auto gap-x-10 grid md:grid-cols-2 '>
+      <Info />
+      <div className="faq-container">
+        {Array.isArray(faqs) && faqs.length > 0 ? (
+          faqs.map((faq, index) => (
+            <div key={index} className="border-2 border-spacing-1 border-solid border-foreground py-4">
+            <FAQItem  question={faq.question} answer={faq.answer} />
+            </div>
+        ))
+        ) : (
+          <p>No FAQs available.</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default FAQ;
